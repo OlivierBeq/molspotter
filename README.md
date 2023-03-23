@@ -40,9 +40,10 @@ from rdkit import Chem
 
 mol = Chem.MolFromSmiles('C=C=C1CN(C)CCN1Cc5ccc(C(=O)Nc4ccc(C)c(Nc3nccc(c2cccnc2)n3)c4)cc5')
 sms.score_mol(mol)
-# 0.023809523809523808
+# 1
 ```
-The silly bit score is defined as $score = \frac{n_{silly bits}}{n_{on bits}}$.
+The binary silly bit score is defined as 1 if the molecule contains any substructure not observed in the reference set and 0 otherwise.
+The continuous score is defined as $score = \frac{n_{silly bits}}{n_{on bits}}$.
 A value of 0.0 means that the molecule does not contain any silly bit, while a value of 1.0 means the molecule is only made of silly bits.
 
 

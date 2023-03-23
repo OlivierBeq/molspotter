@@ -110,7 +110,7 @@ class SillyMolSpotter:
                         pass
         del block
 
-    def score_mol(self, mol: Union[Chem.Mol, List[Chem.Mol]]) -> Union[float, List[float]]:
+    def score_mol(self, mol: Union[Chem.Mol, List[Chem.Mol]], binary: bool = True) -> Union[float, List[float]]:
         """Score how silly the input molecule(s) is/are.
 
         :param mol: RDKit molecule or list of molecules
@@ -131,6 +131,8 @@ class SillyMolSpotter:
             else:
                 score = 1
             scores.append(score)
+        if binary:
+            scores = [int(bool(x)) for x in scores]
         if len(scores) == 1:
             return scores[0]
         return scores

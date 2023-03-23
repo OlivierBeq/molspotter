@@ -5,4 +5,4 @@
 from .molspotter import SillyMolSpotter
 from .io import MolSupplier
 
-__version__= '0.0.1'
+__version__= '0.0.2'
