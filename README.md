@@ -19,7 +19,7 @@ pip install molspotter
 
 ## Usage
 
-Three prepared spotters are included in `molspotter`. They are respectively trained on:
+Three prepared spotters are included in `molspotter` (all with a Morgan radius of 1). They were respectively trained on:
 - [ChEMBL](https://doi.org/10.1093/nar/gky1075) (version 32)
 - [ExCAPE-DB](https://doi.org/10.1186/s13321-017-0203-5) [(Zenodo)](https://doi.org/10.5281/zenodo.675987)
 - [Papyrus](https://doi.org/10.1186/s13321-022-00672-x) [(version 05.6)](https://doi.org/10.5281/zenodo.7373213)
